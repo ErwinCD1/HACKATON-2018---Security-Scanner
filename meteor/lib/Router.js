@@ -37,10 +37,10 @@ Router.route('/posts', {
     }
 });
 
-Router.route('/register', {
-    name: 'register'
+Router.route('/SigninSignup', {
+    name: 'SigninSignup'
 });
 
-Router.route('/authentification', {
-    name: 'authentification'
+Router.route('/contact', {
+    name: 'contact'
 });

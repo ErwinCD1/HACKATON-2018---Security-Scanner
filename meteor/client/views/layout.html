@@ -1,25 +1,82 @@
 <head>
+    <meta charset="utf-8">
     <title>Hot Security</title>
-    <link rel="icon" href="/images/favicon.ico" sizes="16x16 32x32"  type="image/gif">
-    <link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+	<link rel="shortcut icon" href="images/favicon.png">
+	
+	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 
 	<!-- Custom styles for our template -->
 	<link rel="stylesheet" href="css/bootstrap-theme.css" media="screen" >
-	<link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main.css">
+    
+        
+    
+    <!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    
+
+
+
 </head>
-<template class="home" name="mainLayout">       
-    <h1>Hello Hot Security says Welcome !</h1>
-    <div>
-        <ul>
-            <li><a href="{{pathFor route='home'}}">Home</a></li>
-            <li><a href="{{pathFor route='posts'}}">Posts</a></li>
-            <li><a href="{{pathFor route='authentification'}}">Authentification</a></li>
-            <li><a href="{{pathFor route='register'}}">Register</a></li>
-        </ul> 
-   </div>
-    <div>
+
+
+<template class="home" name="mainLayout">      
+    	<!-- Fixed navbar -->
+	<div class="navbar navbar-inverse navbar-fixed-top headroom">
+            <div class="container">
+                <div class="navbar-header">
+                    <!-- Button for smallest screens -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                    <a class="navbar-brand" href="{{pathFor route='home'}}"><img src="images/logo.png" id="logo_hot_security"></a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav pull-right">
+                        <li><a href="{{pathFor route='home'}}">Home</a></li>
+                        <li><a href="{{pathFor route='posts'}}">Posts</a></li>
+                        <li><a href="{{pathFor route='contact'}}">Contact</a></li>
+                        <li><a href="{{pathFor route='SigninSignup'}}">SIGN IN / SIGN UP</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </div> 
+        <!-- /.navbar --> 
+   
+    
+    <div style="margin-top:10%">
         {{> yield}}
     </div>
+
+
+    <footer id="footer">
+            <div class="footer2">
+                <div class="container">
+                    <div class="row">
+                        
+                        <div class="col-md-6 widget">
+                            <div class="widget-body">
+                                <p class="simplenav">
+                                    <a href="#">Home</a> | 
+                                    <a href="about.html">About</a> |
+                                    <a href="sidebar-right.html">Sidebar</a> |
+                                    <a href="contact.html">Contact</a> |
+                                    <b><a href="signup.html">Sign up</a></b>
+                                </p>
+                            </div>
+                        </div>
+    
+                        <div class="col-md-6 widget">
+                            <div class="widget-body">
+                                <p class="text-right">
+                                        Copyright &copy; 2018, Power by Hot Secirity 
+                                </p>
+                            </div>
+                        </div>
+    
+                    </div> <!-- /row of widgets -->
+                </div>
+            </div>
+        </footer>	
 </template>
