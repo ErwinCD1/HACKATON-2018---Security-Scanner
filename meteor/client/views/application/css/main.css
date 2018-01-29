@@ -1,10 +1,12 @@
 #logo_hot_security{
-	width: 8%; 
-	height: 115%;
+	width: 4em; 
+	height:4em;
 	position: absolute;
 	top: 0.5%;
 	left: 0%;
 }
+
+
 
 
 /* Header */
@@ -71,7 +73,8 @@ img.pull-left { margin-right: 10px; }
 	.sidebar h1, .sidebar .h1, .sidebar h2, .sidebar .h2, .sidebar h3, .sidebar .h3 { margin-top:20px; } 
 
 /* Footer */
-.footer1 { background: #232323; padding: 30px 0 0 0; font-size: 12px; color: #999; }
+.footer1 { background: #232323; padding: 30px 0 0 0; font-size: 12px; color: #999; position: absolute;
+    botom: 0;position: fixed;}
 	.footer1 a { color: #ccc; }
 		.footer1 a:hover {color: #fff; }
 	.footer1 .widget { margin-bottom:30px; }		
@@ -92,9 +95,13 @@ img.pull-left { margin-right: 10px; }
 
 
 
-
-
-
+#footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  vertical-align:top;
+}
 
 
 
