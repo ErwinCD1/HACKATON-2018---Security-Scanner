@@ -44,3 +44,7 @@ Router.route('/SigninSignup', {
 Router.route('/contact', {
     name: 'contact'
 });
+
+Router.route('/dons', {
+    name: 'dons'
+});
