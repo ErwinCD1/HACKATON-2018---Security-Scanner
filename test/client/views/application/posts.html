@@ -1,0 +1,12 @@
+<template name="posts">
+        <h1>Dashboard</h1>
+        {{#each posts}}
+        <div class='post'>
+            {{#if hide}}
+                <b style="color:red">Ce post est caché ! Veuillez vous connecter !</b>
+            {{else}}
+                {{title}}, par {{{ setAuthor }}}
+            {{/if}}
+        </div>
+        {{/each}}
+</template>
