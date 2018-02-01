@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="css/particles.css">
       
   <!-- JavaScript libs are placed at the end of the document so the pages load faster -->
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
     
 
@@ -37,10 +37,11 @@
             <div class="container">
                 <div class="navbar-header">
                     <!-- Button for smallest screens -->
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                    <!-- Morgan was here to teach you how to do JS the proper way. Git Gud Noob ! -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" id="nav" ><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
                     <a class="navbar-brand" href="{{pathFor route='home'}}"><img src="images/LOGOHS1.png" id="logo_hot_security" style="width:225px;height:225px;margin-top:-3em"></a>
                 </div>
-                <div class="navbar-collapse collapse">
+                <div class="navbar-collapse collapse" id="navbar" style="display: none;">
                     <ul class="nav navbar-nav pull-right">
                         <li><a href="{{pathFor route='home'}}">Home</a></li>
                         <li><a href="{{pathFor route='posts'}}">Statistics</a></li>
@@ -75,7 +76,7 @@
         </footer>	
 
         <script>
-          
+                    
             /* ---- particles.js config ---- */
     particlesJS("particles-js", {
       "particles": {
@@ -1299,6 +1300,7 @@ pJS.fn.vendors.eventsListeners = function(){
   }
 
   /* on click event */
+
   if(pJS.interactivity.events.onclick.enable){
 
     pJS.interactivity.el.addEventListener('click', function(){
@@ -1730,6 +1732,15 @@ xhr.onreadystatechange = function (data) {
 xhr.send();
 
 };
+
+document.getElementById('nav').addEventListener('click', function() {
+  if(document.getElementById('navbar').style.display === "none"){
+    document.getElementById('navbar').style.display = "block";
+  }else{
+    document.getElementById('navbar').style.display = "none";
+  }
+});
+
 </script>
 
 
@@ -1753,7 +1764,6 @@ xhr.send();
   */
 
  !function(a){a&&(a.fn.headroom=function(b){return this.each(function(){var c=a(this),d=c.data("headroom"),e="object"==typeof b&&b;e=a.extend(!0,{},Headroom.options,e),d||(d=new Headroom(this,e),d.init(),c.data("headroom",d)),"string"==typeof b&&d[b]()})},a("[data-headroom]").each(function(){var b=a(this);b.headroom(b.data())}))}(window.Zepto||window.jQuery);
-
 
 
  // TEMPLATE.JS
