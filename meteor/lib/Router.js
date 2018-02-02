@@ -28,10 +28,6 @@ Router.route('/posts', {
                     title: "Deuxième post",
                     hide: false
                 },
-                {
-                    title: "Troisième post",
-                    hide: false
-                },
             ]
         };
     }
