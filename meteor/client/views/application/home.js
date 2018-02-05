@@ -11,42 +11,29 @@ Template.home.events({
                 var link_github = $('#link_github');
                 var CountryName_value = "France";
 
-                // try {
-                //     const result = HTTP.call('GET', 'http://www.webservicex.net/globalweather.asmx/GetCitiesByCountry', {
-                //       params: { CountryName: CountryName_value }
-                //     });
-              
-                //     return alert(result);
-                //   } catch (e) {
-                //     // Got a network error, timeout, or HTTP error in the 400 or 500 range.
-                //     return alert("REQUETE NON EXECUTEE ! ERREUR ! ");
-                //   }
-            
-
-                // const result = HTTP.call('POST', 'http://www.webservicex.net/globalweather.asmx/GetCitiesByCountry', {
-                //     data: { CountryName: CountryName_value }
-                //     }, (error, result) => {
-                //     if (!error) {
-                //         Session.set('twizzled', true);
-                //     }
-                //     alert (result);
-                //     });
-
-
-                // var test = document.getElementById('affiche_result_link');
-                // // alert("On est bien passé dans le formulaire ! \n\n Notre Lien : " + link_github.val());          
-          
-                // setTimeout(function() {test.innerHTML = "Lien transmis avec succès !"}, 500w);
-                
-                
-                // function masquernotification()
-                // {
-                //   test.innerHTML= "";
+                // HTTP.call( 'GET', 'http://www.webservicex.net/globalweather.asmx/GetCitiesByCountry?CountryName='+CountryName_value, {
+                // }, function( error, response ) {
+                // if ( error ) {
+                //         console.log( error );
+                // } else {
+                //         console.log( response.content);
+                //         alert( response.content);
                 // }
-                // window.setTimeout(masquernotification, 2000);
+                // });
             
             
-              }
+
+                HTTP.call( 'GET', 'https://swapi.co/api/people/1', {
+                }, function( error, response ) {
+                if ( error ) {
+                        console.log( error );
+                } else {
+                        console.log( response.data.name);
+                        alert( response.data.name);
+                }
+                });
+            
+        }
 });
 
 
