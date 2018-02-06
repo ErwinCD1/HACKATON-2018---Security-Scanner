@@ -29,7 +29,8 @@ Template.home.events({
                         console.log( error );
                 } else {
                         console.log( response.data.name);
-                        alert( response.data.name);
+                        alert( response.content);
+                        // alert( response.data.name);
                 }
                 });
             
