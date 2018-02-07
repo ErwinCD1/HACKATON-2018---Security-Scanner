@@ -1,0 +1,17 @@
+<template name="history">
+
+    <h1>HistoryBoard</h1>
+    {{#each history}}
+    <div class='history'>
+        {{#if hide}}
+            <b style="color:green">Vous avez accès a votre historique ! </b>      
+        {{else}}
+            {{title}}
+            <b style="color:red">Ce post est caché ! Veuillez vous connecter !</b>
+        {{/if}}
+    </div>
+    {{/each}}
+
+
+
+</template>

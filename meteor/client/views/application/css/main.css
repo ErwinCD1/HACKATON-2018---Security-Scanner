@@ -14,9 +14,6 @@ body{
 	background-color: #e2e2e2;
 }
 #charts{
-
-	border: 1px solid grey;
-	position: relative;
 	overflow: hidden;
 }
 
