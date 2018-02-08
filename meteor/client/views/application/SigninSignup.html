@@ -28,19 +28,19 @@
       <div class="cont_form_login">
         <a href="#" onclick="ocultar_login_sign_up()" ><i class="material-icons">&#xE5C4;</i></a>
         <h2>LOGIN</h2>
-        <input type="text" placeholder="Email" />
-        <input type="password" placeholder="Password" />
-        <button class="btn_login" onclick="cambiar_login()">SIGN IN</button>
+        <input type="text" placeholder="Email" id="log_email_txt"/>
+        <input type="password" placeholder="Password" id="log_password_txt"/>
+        <button class="btn_login" onclick="cambiar_login()" id="log_submit_btn">SIGN IN</button>
 
       </div>
       <div class="cont_form_sign_up">
           <a href="#" onclick="ocultar_login_sign_up()"><i class="material-icons">&#xE5C4;</i></a>
           <h2>SIGN UP</h2>
-          <input type="text" placeholder="Email" />
-          <input type="text" placeholder="User" />
-          <input type="password" placeholder="Password" />
-          <input type="password" placeholder="Confirm Password" />
-          <button class="btn_sign_up" onclick="cambiar_sign_up()">SIGN UP</button>
+          <input type="text" placeholder="Email" id="reg_email_txt"/>
+          <input type="text" placeholder="User" id="reg_name_txt"/>
+          <input type="password" placeholder="Password" id="reg_password_txt"/>
+          <input type="password" placeholder="Confirm Password" id="reg_password_confirm_txt"/>
+          <button class="btn_sign_up" onclick="cambiar_sign_up()" id="reg_submit_btn" >SIGN UP</button>
         </div>
       </div>
     </div>
@@ -71,6 +71,8 @@
         setTimeout(function() {   document.querySelector('.cont_form_login').style.display = "none";
         },400);  
         
+
+
         
         }    
         

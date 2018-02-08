@@ -51,7 +51,7 @@ Router.route('/history', {
         return {
             history: [
                 {
-                    hide: false
+                    hide: true
                 }
             ]
         };
