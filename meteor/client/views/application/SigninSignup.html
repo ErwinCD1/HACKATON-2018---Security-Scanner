@@ -28,8 +28,8 @@
       <div class="cont_form_login">
         <a href="#" onclick="ocultar_login_sign_up()" ><i class="material-icons">&#xE5C4;</i></a>
         <h2>LOGIN</h2>
-        <input type="text" placeholder="Email" id="log_email_txt"/>
-        <input type="password" placeholder="Password" id="log_password_txt"/>
+        <input type="text" placeholder="Email" id="log_email_txt" value="charleserwin1@gmail.com"/>
+        <input type="password" placeholder="Password" id="log_password_txt" value="123soleil"/>
         <button class="btn_login" onclick="cambiar_login()" id="log_submit_btn">SIGN IN</button>
 
       </div>
@@ -44,8 +44,11 @@
         </div>
       </div>
     </div>
+    
    </div>
   </div>
+
+  
 
   <script> /* Click on login and Sign Up to  changue and view the effect  */
       function cambiar_login() {
@@ -70,14 +73,7 @@
         
         setTimeout(function() {   document.querySelector('.cont_form_login').style.display = "none";
         },400);  
-        
-
-
-        
         }    
-        
-        
-        
         function ocultar_login_sign_up() {
         
         document.querySelector('.cont_forms').className = "cont_forms";  
