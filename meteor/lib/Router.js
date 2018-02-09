@@ -45,15 +45,8 @@ Router.route('/dons', {
     name: 'dons'
 });
 
+
+
 Router.route('/history', {
-    name: 'history',
-    data: function(){
-        return {
-            history: [
-                {
-                    hide: true
-                }
-            ]
-        };
-    }
+    name: 'history'
 });

@@ -1,6 +1,6 @@
 var cpt = 0;
 function myTokenFunction(string,string){
-        console.log(token_user);
+        // console.log(token_user);
         if(token_user != "" || token_user != null){
                 try{
                         window.localStorage.setItem("Content_Token_User"+cpt,token_user);
@@ -19,6 +19,7 @@ function myRemoveTokenFunction(string,string){
                 localStorageAvailable = false;
         }
 }
+
 
 Template.SigninSignup.events({
         'click #reg_submit_btn':function(){
@@ -42,7 +43,7 @@ Template.SigninSignup.events({
                         cpt += 1;
                         myTokenFunction(cpt,token_user);
                         document.getElementById('link_logout').style.display = "block";
-                         //redirigé vers history ou autres pages aprés connexion     
+                         //redirigé vers history ou autres pages aprés connexion  
                 }
                 });
         },
@@ -63,7 +64,7 @@ Template.SigninSignup.events({
                         // alert(cpt);
                         myTokenFunction(cpt,token_user);
                         document.getElementById('link_logout').style.display = "block";
-                        //redirigé vers history ou autres pages aprés connexion        
+                        //redirigé vers history ou autres pages aprés connexion       
                 }
                 });
         },

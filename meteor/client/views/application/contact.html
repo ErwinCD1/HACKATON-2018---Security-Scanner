@@ -30,12 +30,27 @@
                             <br>
                             <div class="row">
                                 <div class="col-sm-6 text-right">
-                                    <input class="btn btn-default btn-block" type="submit" value="Send message">
+                                    <input class="btn btn-default btn-block" onclick='envoiecontact()' type="button" value="Send message" id="sendContact"/>
                                 </div>
                             </div>
                         </form>
+
+
+
+                        
+
+                        <div id="retourContact" style="display:none;"><br><br>Demande reçu avec succès ! et sera traité sous 48 h ;)</div>
     
-                </article>
+               
+                        <script>
+                                function envoiecontact(){
+                                    document.getElementById('retourContact').style.display = "block";
+                                    setTimeout(function(){
+                                        document.getElementById('retourContact').style.display = "none";},2000);                                
+                                };    
+                            </script>
+               
+                    </article>
                 <!-- /Article -->
                 
                 <!-- Sidebar -->

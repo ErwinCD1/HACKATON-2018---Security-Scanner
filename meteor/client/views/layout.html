@@ -51,7 +51,7 @@
                         <li><a href="{{pathFor route='dons'}}" id="link_donation" onclick="ExtendMenuLink(this.id)">Donations</a></li>
                         <li><a href="{{pathFor route='contact'}}" id="link_contact" onclick="ExtendMenuLink(this.id)">Contact</a></li>
                         <li><a href="{{pathFor route='SigninSignup'}}" id="link_sign" onclick="ExtendMenuLink(this.id)">SIGN IN / SIGN UP</a></li>
-                        <li><a href="{{pathFor route='SigninSignup'}}" id="link_logout" onclick="ExtendMenuLink(this.id)" style="display: none;">LOGOUT</a></li>
+                        <li><a href="{{pathFor route='SigninSignup'}}" id="link_logout" onclick="ExtendMenuLink(this.id);decouser()" style="display: none;">LOGOUT</a></li>
                     </ul>
                 </div><!--/.nav-collapse -->
         </div> 
@@ -1747,7 +1747,10 @@ function ExtendMenuLink(id) {
 }
 
 
-
+function decouser(){
+      localStorage.clear();
+      document.getElementById('link_logout').style.display = "none";
+    }
 
 
 
@@ -1795,17 +1798,6 @@ function ExtendMenuLink(id) {
 
 
 
-
-
-
-  <script> // LOGOUT
-    jQuery(window).onLoad(function(){
-      $('#link_logout').click(function(){
-        alert('fbsfdgsfgs');
-        // myRemoveTokenFunction(cpt,token_user);
-      })
-    });
-  </script>
 
 
 

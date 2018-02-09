@@ -10,13 +10,13 @@ Template.home.events({
                 
 
                 HTTP.call( 'POST', 'http://192.168.1.200:53600/api/report', {
-                data: { email: email_send,  git_repository: link_github}
+                data: { email: email_send , git_repository: link_github}
                 }, function( error, response ) {
                 if ( error ) {
                         console.log( error );
                 } else {
                         console.log( response.content );
-                        alert( response );
+                        alert( response.data.message);
                 }
                 });
                 },

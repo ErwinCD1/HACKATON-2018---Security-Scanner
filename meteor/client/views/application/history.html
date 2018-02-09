@@ -1,21 +1,28 @@
 <template name="history">
 
     <h1>HistoryBoard</h1>
-    {{#each history}}
+    <!-- {{#each history}} -->
     <div class='history'>
-        {{#if hide}}
+        <!-- {{#if hide}} -->
             <b style="color:green">Vous avez accès a votre historique ! </b>      
-            <div id="affiche_History_page_user"></div>
-        
-            {{else}}
-            {{title}}
-            <b style="color:red">Ce post est caché ! Veuillez vous connecter !</b>
-        {{/if}}
+            <div id="affiche_History_page_user" style="display:none;">
+                <p>shtrshs</p>
+            </div>
+
+            <div id="NONCONNECT_History_page_user" style="display:none;">
+                    <b style="color:red">Ce post est caché ! Veuillez vous connecter !</b>
+            </div>
+
+
+            <form>
+                <h2>Insert your GitHub link here to scan your project Please !</h2><br>
+                <input type="url" id="link_github_report" class="form-control" style="width:80%;margin-left:10%;" placeholder="Your link please!" required /><br /><br>
+                <input type="submit" id="loadScan" class="btn btn-primary btn-lg btnLinkGit" value=" Load Scan "/>
+            </form>
+
+           
+
     </div>
-    {{/each}}
 
 
-    <script>
-        document.getElementById("affiche_History_page_user").innerHTML = "{{setDATA}}";
-    </script>
 </template>
