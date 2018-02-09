@@ -22,16 +22,16 @@
       google.charts.setOnLoadCallback(drawChart1);
       function drawChart1() {
         var data = google.visualization.arrayToDataTable([
-          ['Task', 'Hours per Day'],
-          ['Work',     11],
-          ['Eat',      2],
-          ['Commute',  2],
-          ['Watch TV', 2],
-          ['Sleep',    7],
+          ['ERROR', 'Numbers'],
+          ['Syntax Error',     11],
+          ['Not found',      2],
+          ['Information',  2],
+          ['Warning', 7],
+          ['Other',    2],
         ]);
 
         var options = {
-          title: 'My Daily Activities',
+          title: 'Type of Message',
           is3D: true,
         };
         var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
