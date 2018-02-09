@@ -42,6 +42,7 @@ Template.SigninSignup.events({
                         cpt += 1;
                         myTokenFunction(cpt,token_user);
                         document.getElementById('link_logout').style.display = "block";
+                         //redirigé vers history ou autres pages aprés connexion     
                 }
                 });
         },
@@ -61,17 +62,9 @@ Template.SigninSignup.events({
                         cpt += 1;
                         // alert(cpt);
                         myTokenFunction(cpt,token_user);
-                        document.getElementById('link_logout').style.display = "block";        
+                        document.getElementById('link_logout').style.display = "block";
+                        //redirigé vers history ou autres pages aprés connexion        
                 }
                 });
         },
-        
-        'click #link_logout':function(){
-                alert('fbsfdgsfgs');
-                // myRemoveTokenFunction(cpt,token_user);
-        },
-
-
-
-    
 });

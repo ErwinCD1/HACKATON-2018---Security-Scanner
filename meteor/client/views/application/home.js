@@ -19,7 +19,14 @@ Template.home.events({
                         alert( response );
                 }
                 });
-                }
+                },
+
+        // 'click #link_logout':function(){
+        //         alert('fbsfdgsfgs');
+        //         // myRemoveTokenFunction(cpt,token_user);
+        // },
+                
+              
 });
 
 
