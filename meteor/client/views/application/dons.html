@@ -1,0 +1,60 @@
+<template name="dons">
+    <h2>
+            Welcome to our site and we propose to make donations to help us finalize our project.
+            <br/><br/>
+            We need you!
+            <br/><br/>
+            Help us by making a donation, several solutions are possible</h2><br/><br/>
+
+
+<!-- DEBUT DON VIA MAIL -->
+<!-- https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8BU3RZE6ZHSNL -->
+<!-- FIN DON VIA MAIL -->
+
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="8BU3RZE6ZHSNL">
+                <input type="image" src="https://www.paypalobjects.com/fr_FR/FR/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal, le réflexe sécurité pour payer en ligne">
+                <img alt="" border="0" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
+            </form>
+            
+<br><br>
+            <div style="display:flex;flex-direction:row;justify-content:center;">
+                <div id="cd143"></div> <div id="cd750"></div><div id="cd649"></div>
+                <script>
+                !function(c){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.onload=c,t.src="//lab.subinsb.com/projects/francium/cryptodonate/widget.js";var e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e)}(function(){
+                    Fr.loadCD("cd143", {
+                    coin: "bitcoin",
+                    address: "1HskazdvKLkzQksatoZ2EM3ypQG5EKy9Af",
+                    buttonClass: "large dark",
+                    dialogClass: "large dark",
+                    });
+                });
+                </script>
+
+                <script>
+                !function(c){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.onload=c,t.src="//lab.subinsb.com/projects/francium/cryptodonate/widget.js";var e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e)}(function(){
+                    Fr.loadCD("cd750", {
+                    coin: "ethereum",
+                    address: "0x72c95ed782aE2992d1C8afdFa271548136220114",
+                    buttonClass: "large dark",
+                    dialogClass: "large dark",
+                    });
+                });
+                </script>
+                
+                <script>
+                !function(c){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.onload=c,t.src="//lab.subinsb.com/projects/francium/cryptodonate/widget.js";var e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e)}(function(){
+                    Fr.loadCD("cd649", {
+                    coin: "litecoin",
+                    address: "LM9QTR2uznEnJSJmpPN7cJvepzVuTSynAK",
+                    buttonClass: "large dark",
+                    dialogClass: "large dark",
+                    });
+                });
+                </script>
+            </div>
+
+
+
+</template>

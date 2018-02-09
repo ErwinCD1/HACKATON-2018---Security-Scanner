@@ -1,12 +1,120 @@
 <template name="posts">
-        <h1>Liste des posts</h1>
+        <h1>Dashboard</h1>
         {{#each posts}}
         <div class='post'>
             {{#if hide}}
-                Ce post est caché !
+                <b style="color:red">Ce post est caché ! Veuillez vous connecter !</b>
             {{else}}
                 {{title}}, par {{{ setAuthor }}}
+                <div id="charts">
+                        <div id="piechart_3d" style=" margin:15px auto; min-height: 200px;"></div>
+                        <div id="chart_div" style="margin:15px auto; min-height: 200px;"></div> 
+                        <div id="calendar_basic" style=" margin:15px auto; min-height: 200px;"></div>
+                </div>
             {{/if}}
         </div>
         {{/each}}
+
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> <!-- PIE CHART -->
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"],callback: drawChart1});
+      google.charts.setOnLoadCallback(drawChart1);
+      function drawChart1() {
+        var data = google.visualization.arrayToDataTable([
+          ['ERROR', 'Numbers'],
+          ['Syntax Error',     11],
+          ['Not found',      2],
+          ['Information',  2],
+          ['Warning', 7],
+          ['Other',    2],
+        ]);
+
+        var options = {
+          title: 'Type of Message',
+          is3D: true,
+        };
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        chart.draw(data, options);
+      }
+
+        
+    </script>
+
+<script type="text/javascript"> // BAR CHART //
+  google.charts.load("current", {packages:["corechart"]});
+  google.charts.setOnLoadCallback(drawChart2);
+  function drawChart2() {
+    var data = google.visualization.arrayToDataTable([
+    ['Quarks', 'Leptons', 'Gauge Bosons', 'Scalar Bosons'],
+    [2/3, -1, 0, 0],
+    [2/3, -1, 0, null],
+    [2/3, -1, 0, null],
+    [-1/3, 0, 1, null],
+    [-1/3, 0, -1, null],
+    [-1/3, 0, null, null],
+    [-1/3, 0, null, null]
+  ]);
+  var chart = new google.visualization.Histogram(document.getElementById('chart_div'));
+
+  var options = {
+    title: 'Charges of subatomic particles',
+    legend: { position: 'top', maxLines: 2 },
+    colors: ['#5C3292', '#1A8763', '#871B47', '#999999'],
+    interpolateNulls: false,
+  };
+    chart.draw(data, options);
+    }
+</script>
+
+<script type="text/javascript"> // Calendar chart //
+    google.charts.load("current", {packages:["calendar"]});
+    google.charts.setOnLoadCallback(drawChart3);
+
+ function drawChart3() {
+     var dataTable = new google.visualization.DataTable();
+     dataTable.addColumn({ type: 'date', id: 'Date' });
+     dataTable.addColumn({ type: 'number', id: 'Won/Loss' });
+     dataTable.addRows([
+        [ new Date(2017, 3, 13), 37032 ],
+        [ new Date(2017, 3, 14), 38024 ],
+        [ new Date(2017, 3, 15), 38024 ],
+        [ new Date(2017, 3, 16), 38108 ],
+        [ new Date(2017, 3, 17), 38229 ],
+        // Many rows omitted for brevity.
+        [ new Date(2017, 9, 4), 38177 ],
+        [ new Date(2017, 9, 5), 38705 ],
+        [ new Date(2017, 9, 12), 38210 ],
+        [ new Date(2017, 9, 13), 38029 ],
+        [ new Date(2017, 9, 19), 38823 ],
+        [ new Date(2017, 9, 23), 38345 ],
+        [ new Date(2017, 9, 24), 38436 ],
+        [ new Date(2017, 9, 30), 38447 ]
+      ]);
+
+     var chart = new google.visualization.Calendar(document.getElementById('calendar_basic'));
+
+     var options = {
+      title: 'Red Sox Attendance',
+      height: 350,
+      calendar: {
+        underYearSpace: 10, // Bottom padding for the year labels.
+        yearLabel: {
+          fontName: 'Times-Roman',
+          fontSize: 32,
+          color: '#1A8763',
+          bold: true,
+          italic: true
+        }
+      }
+    };
+
+     chart.draw(dataTable, options);
+ }
+$(window).resize(function(){
+    drawChart1();
+    drawChart2();
+    drawChart3();
+});
+</script>
 </template>

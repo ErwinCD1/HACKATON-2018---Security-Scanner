@@ -28,19 +28,25 @@ Router.route('/posts', {
                     title: "Deuxième post",
                     hide: false
                 },
-                {
-                    title: "Troisième post",
-                    hide: false
-                },
             ]
         };
     }
 });
 
-Router.route('/register', {
-    name: 'register'
+Router.route('/SigninSignup', {
+    name: 'SigninSignup'
 });
 
-Router.route('/authentification', {
-    name: 'authentification'
+Router.route('/contact', {
+    name: 'contact'
+});
+
+Router.route('/dons', {
+    name: 'dons'
+});
+
+
+
+Router.route('/history', {
+    name: 'history'
 });
